@@ -22,6 +22,7 @@ test_models = [
     "liquid/lfm-2.5-1.2b-thinking:free",            
 ]
 
+# Main tests: latency, tokens, cost
 def test_models_all(models: list):
     for model in models:
         print(f"Testing {model}...")
@@ -47,7 +48,7 @@ def test_models_all(models: list):
 
         time.sleep(10)
 
-
+# OpenRouter API error handling tests
 def test_error_handling():
     print("Testing bad API key...")
     response = requests.post(
@@ -80,6 +81,7 @@ def test_error_handling():
     print(f"  Empty messages: {response.status_code}")
 
 
+# Main OpenRouter API request function
 def or_request(model: list, prompt: str ="Hello, how are you?"): 
     response = requests.post(
         "https://openrouter.ai/api/v1/chat/completions",
