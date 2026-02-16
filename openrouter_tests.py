@@ -1,7 +1,16 @@
+# OpenRouter API Test Script
+# ------------------------ #
+
+# Tests connectivity, latency, token usage, cost, and error handling
+# across multiple models via the OpenRouter API.
+# Results can be viewed on the 'OpenRouter API Testing' confluence page.
+
 import requests
 import json
 import time
 import os
+from dotenv import load_dotenv
+load_dotenv()
 
 API_KEY = os.getenv("OPENROUTER_API_KEY")
 
