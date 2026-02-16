@@ -2,7 +2,7 @@
 # ------------------------ #
 
 # Tests connectivity, latency, token usage, cost, and error handling
-# across multiple models via the OpenRouter API.
+# across models of your choosing with the OpenRouter API.
 # Results can be viewed on the 'OpenRouter API Testing' confluence page.
 
 import requests
